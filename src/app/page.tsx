@@ -190,8 +190,8 @@ const GymMembershipApp: React.FC = () => {
         console.log("Promotions set: ", data.promociones);
         setCurrentPage('status');
       } else if (data.status === "404") {
-        setPromotions(data.promociones);
-        setCurrentPage('promotions');
+        alert("Cliente no encontrado. Regístrese para contratar una membresía.");
+        setCurrentPage('registro');
       } else {
         alert("Error al verificar la membresía. Por favor, intente nuevamente.");
       }
